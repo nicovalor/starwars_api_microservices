@@ -1,9 +1,9 @@
 const express = require("express");
-const createProxyMiddleware = require("http-proxy-middleware");
+const { createProxyMiddleware } = require("http-proxy-middleware");
 const server = express();
 const PORT = 8000;
 
-app.use(
+server.use(
   "/characters",
   createProxyMiddleware({
     target: "http://localhost:8001",
@@ -11,7 +11,7 @@ app.use(
   })
 );
 
-app.use(
+server.use(
   "/films",
   createProxyMiddleware({
     target: "http://localhost:8002",
@@ -19,7 +19,7 @@ app.use(
   })
 );
 
-app.use(
+server.use(
   "/planets",
   createProxyMiddleware({
     target: "http://localhost:8003",
