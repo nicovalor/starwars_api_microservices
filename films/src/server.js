@@ -10,7 +10,7 @@ server.use("*", (req, res) => {
   res.status(404).send("Not found");
 });
 server.use((err, req, res, next) => {
-  res.status(500).json({
+  res.status(err.statusCode).json({
     error: true,
     message: err.message,
   });
