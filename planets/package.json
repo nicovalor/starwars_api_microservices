@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "server": " docker run --network=starwars --name=planets -p 8003:803 planets"
+
   },
   "keywords": [],
   "author": "",

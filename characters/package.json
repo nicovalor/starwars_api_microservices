@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "server": " docker run --network=starwars --name=characters -p 8001:8001 characters"
   },
   "keywords": [],
   "author": "",
