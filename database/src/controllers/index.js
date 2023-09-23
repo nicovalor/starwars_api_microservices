@@ -1,5 +1,7 @@
+const catchedAsync = require("../utils/catchedAsync");
+
 module.exports = {
-  list: require("./list"),
-  get: require("./get"),
-  insert: require("./insert"),
+  list: catchedAsync(require("./list")),
+  get: catchedAsync(require("./get")),
+  insert: catchedAsync(require("./insert")),
 };
